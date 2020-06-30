@@ -8,6 +8,18 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+function anagrams(stringA, stringB) {
+  // clear-up punction symbols;
+  var s1 = stringA.replace(/[^\w]/g, '');
+  var s2 = stringB.replace(/[^\w]/g, '');
+
+  if (s1.length !== s2.length) return false;
+
+  //sort character order
+  s1 = s1.split('').sort().join('');
+  s2 = s2.split('').sort().join('');
+
+  return s1 === s2;
+}
 
 module.exports = anagrams;
