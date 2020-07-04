@@ -10,11 +10,12 @@
 function capitalize(str) {
   let arr = str.split(' ');
 
+  let finalStr = '';
   for (let word of arr) {
-    word = word.charAt(0).toUpperCase();
+    finalStr += word.charAt(0).toUpperCase() + word.slice(1) + ' ';
   }
 
-  return arr.join(' ');
+  return finalStr.trim();
 }
 
 module.exports = capitalize;
