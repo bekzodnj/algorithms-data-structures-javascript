@@ -19,8 +19,9 @@ function pyramid(n) {
   let hashes = 1;
 
   //loop for lines of output
-  for (let i = 0; i < n; i++) {
+  for (let j = 1; j <= n; j++) {
     let output = '';
+    hashes = j * 2 - 1;
 
     //spaces adder starting
     for (let i = 0; i < spaces; i++) {
@@ -39,7 +40,6 @@ function pyramid(n) {
     console.log(output);
 
     spaces--;
-    hashes = hashes * 2 - 1;
   }
 }
 
