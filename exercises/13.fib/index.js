@@ -9,17 +9,16 @@
 //   fib(4) === 3
 
 function fib(n) {
-  let counter = 0;
+  let counter = 1;
 
-  let first = 1;
+  let first = 0;
   let second = 1;
 
   let sum = 0;
   while (counter != n) {
     sum = first + second;
-    second = sum;
     first = second;
-
+    second = sum;
     counter++;
   }
 
