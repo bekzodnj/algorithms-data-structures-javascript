@@ -9,20 +9,28 @@
 //   fib(4) === 3
 
 function fib(n) {
-  let counter = 1;
-
-  let first = 0;
-  let second = 1;
-
-  let sum = 0;
-  while (counter != n) {
-    sum = first + second;
-    first = second;
-    second = sum;
-    counter++;
+  if (n < 2) {
+    return n;
   }
 
-  return second;
+  return fib(n - 1) + fib(n - 2);
 }
 
 module.exports = fib;
+
+// function fib(n) {
+//   let counter = 1;
+
+//   let first = 0;
+//   let second = 1;
+
+//   let sum = 0;
+//   while (counter != n) {
+//     sum = first + second;
+//     first = second;
+//     second = sum;
+//     counter++;
+//   }
+
+//   return second;
+// }
